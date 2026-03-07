@@ -8,8 +8,8 @@ jobs:
   Validate:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
-        fail-fast: false
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
     steps:
       - name: checkout code
