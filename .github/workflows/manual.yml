@@ -1,0 +1,23 @@
+---
+name: Manual Workflow
+
+on:
+  workflow_dispatch:
+
+    inputs:
+      environment:
+        description: Enter environment
+        required: true
+        default: staging
+        type: choice
+        options:
+          - staging
+          - production
+
+jobs:
+  print-input:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print input
+        runs: echo "input value ${{ inputs.environment }}"
