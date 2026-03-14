@@ -20,4 +20,4 @@ jobs:
 
     steps:
       - name: Print input
-        runs: echo "input value ${{ inputs.environment }}"
+        run: echo "input value ${{ inputs.environment }}"
