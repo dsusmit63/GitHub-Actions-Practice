@@ -1,0 +1,20 @@
+---
+name: Dummy Workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  print_infos:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
+    steps:
+      - name: Print OS name
+        run: echo "OS is $RUNNER_OS"
+      - name: Print hostname
+        run: hostname -I
+      - name: Print current user
+        run: echo "Current user ${{ github.actor }}"
