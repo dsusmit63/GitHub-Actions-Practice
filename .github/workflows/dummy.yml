@@ -20,7 +20,7 @@ jobs:
         run: whoami
       - name: Check pre-installed tools
         run: |
-          if [ ${{ runner.os }} == "Linux" ]; then
+          if [ ${{ runner.os }} == Linux ]; then
             echo "Docker version $(docker --version)"
             echo "Python version $(python --version)"
             echo "Node version $(node --version)"
